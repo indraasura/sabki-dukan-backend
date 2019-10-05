@@ -15,3 +15,8 @@ class TransactionsSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Transactions
 		fields = ["trans_id", "fk_p_id", "created_at", "quantity", "fk_phone"]
+
+class PhotoSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Product
+        fields = ('image')

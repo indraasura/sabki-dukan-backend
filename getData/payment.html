@@ -1,0 +1,41 @@
+<meta name="viewport" content="width=device-width">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Payments</title>
+	<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+	<script>
+  /* eslint-disable */
+  	function openIt() {
+  		console.log('yes');
+        const rzp1 = new Razorpay({
+        "key": "rzp_test_GdHGJX8WrUESu5", // Enter the Key ID generated from the Dashboard
+        "amount": "100", // Amount is in currency subunits. Default currency is INR. Hence, 29935 refers to 29935 paise or INR 299.35.
+        "currency": "INR",
+        "name": "Acme Corp",
+        "description": "A Wild Sheep Chase is the third novel by Japanese author  Haruki Murakami",
+        "image": "https://example.com/your_logo",
+        "order_id": "order_DQFRIEvHh3IuWz",// Order ID is generated as Orders API has been implemented. Refer the Checkout form table given below
+        "handler": function(response){
+          alert(response.razorpay_payment_id);
+        },
+        "prefill": {
+          "name": "Gaurav Kumar",
+          "email": "gaurav.kumar@example.com"
+        },
+        "notes": {
+          "address": "note value"
+        },
+        "theme": {
+          "color": "#F37254"
+        }
+      });
+          rzp1.open();
+      }
+</script>
+</head>
+<body>
+	<button id="rzp-button1" onclick="openIt()">Pay</button>
+</body>
+</html>
+
