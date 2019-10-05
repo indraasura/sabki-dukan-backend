@@ -1,0 +1,457 @@
+/*html {*/
+    /*overflow-y: hidden;*/
+/*}*/
+
+.srd-diagram {
+    height: 100vh;
+    background-color: black;
+}
+
+header, main, footer {
+    padding-left: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+    header, main, footer {
+        padding-left: 0;
+    }
+}
+
+.somePadding {
+    padding-left: 500px;
+}
+
+.fixedGenerate {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 7px;
+    z-index: 1;
+}
+
+.fixedLoader {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 30px;
+    z-index: 999;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.srd-demo-canvas {
+    height: 100vh;
+    background-size: 50px 50px;
+}
+
+.light {
+    background-color: rgb(204, 216, 255) !important;
+    background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .7) 25%, rgba(255, 255, 255, .7) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .7) 75%, rgba(255, 255, 255, .7) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .7) 25%, rgba(255, 255, 255, .7) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .7) 75%, rgba(255, 255, 255, .7) 76%, transparent 77%, transparent);
+}
+
+.dark {
+    background-color: #292929 !important;
+    background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent);
+}
+
+.srd-demo-canvas .pointui {
+    fill: rgba(255, 255, 255, 0.5);
+}
+.button-progress {
+    position: absolute !important;
+    margin: 0 !important;
+    left: 7px !important;
+}
+.call-button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    margin-left: 100px;
+    z-index: 4
+}
+
+.loadingspinner {
+    pointer-events: none;
+    width: 1.5em;
+    height: 1.5em;
+    border: 0.2em solid transparent;
+    border-color: #eee;
+    border-top-color: #3e67ec;
+    border-radius: 50%;
+    animation: loadingspin 1s linear infinite;
+}
+@keyframes loadingspin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.right-side-nav {
+    width: 300px;
+}
+
+span .value {
+    padding-right: 60px;
+    padding-left: 5px;
+}
+
+.call-time {
+    float: right;
+    margin-top: 5px;
+    font-size: 12px;
+    color: white;
+}
+
+.call-time-icon {
+    display: inline-flex;
+    vertical-align: top;
+    font-size: 20px;
+    margin-right: 3px;
+}
+
+.restore-card {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    margin-top: 5px;
+    padding: 10px;
+    width: 300px;
+    background-color: #393939;
+    color: white;
+}
+
+.restore-close-button {
+    margin-top: 5px;
+    display: inline-flex;
+    vertical-align: top;
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#custom-toast {
+    visibility: hidden;
+    min-width: 350px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 2;
+    left: 50%;
+    bottom: 30px;
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#custom-toast.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s;
+    animation: fadein 0.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+#dropdown1 li:hover {
+    background-color: #323232;
+}
+
+.call-progress-animation {
+    background: #fff;
+    position: relative;
+    margin: 0 auto;
+    animation: play 2s ease infinite;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+}
+
+@keyframes play {
+
+    0% {
+        transform: scale(1);
+    }
+    15% {
+        box-shadow: 0 0 0 5px rgba(0, 230, 118, 0.4)
+    }
+    25% {
+        box-shadow: 0 0 0 10px rgba(0, 230, 118, 0.4), 0 0 0 20px rgba(0, 230, 118, 0.2);
+    }
+    25% {
+        box-shadow: 0 0 0 15px rgba(0, 230, 118, 0.4), 0 0 0 30px rgba(0, 230, 118, 0.2);
+    }
+
+}
+
+.timeline-progress-animation {
+    background: #fff;
+    position: relative;
+    margin: 0 auto;
+    animation: timeline-play 2s ease infinite;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+}
+
+@keyframes timeline-play {
+
+    0% {
+        transform: scale(1);
+    }
+    15% {
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4)
+    }
+    25% {
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.4), 0 0 0 7px rgba(255, 255, 255, 0.2);
+    }
+    25% {
+        box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.4), 0 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+
+}
+
+/* Timeline basic structure */
+#lineCont {
+    width: 80%;
+}
+
+#line {
+    height: 6px;
+    width: 90%;
+    background: white;
+    border-radius: 5px;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+}
+
+#span {
+    display: none;
+    width: 70%;
+    margin: auto;
+    margin-top: 25%;
+    text-align: center;
+    color: white;
+}
+
+.circle-timeline {
+    width: 20px;
+    height: 20px;
+    background: #393939;
+    border-radius: 15px;
+    position: absolute;
+    top: -7px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.circle-timeline:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #393939;
+    position: absolute;
+    border-radius: 100%;
+    top: 3px;
+    left: 3px;
+    display: none;
+}
+
+.done {
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    top: -7px;
+}
+
+.circle-timeline .popupSpan {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    white-space: nowrap;
+    display: inline-block;
+    color: red;
+    position: absolute;
+    top: 10px;
+    left: -27px;
+    font-size: 0.7rem;
+    transition: all 0.1s ease-out;
+}
+.circle-timeline:hover:before, .circle-timeline.active:before {
+    display: block;
+}
+.circle-timeline:hover .popupSpan, .circle-timeline.active .popupSpan {
+    display: block;
+}
+.circle-timeline.active .popupSpan {
+    font-weight: bold;
+}
+
+#timeline-toast {
+    visibility: hidden;
+    min-width: 550px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 30px 30px 30px 10px;
+    position: fixed;
+    z-index: 2;
+    left: 50%;
+    top: 30px;
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#timeline-toast.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: timeline-fadein 0.5s;
+    animation: timeline-fadein 0.5s;
+    transition: all 0.5s ease-in-out;
+}
+
+@-webkit-keyframes timeline-fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+}
+
+@keyframes timeline-fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes timeline-fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+}
+
+@keyframes timeline-fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+}
+
+.timeline-counter {
+    position: absolute;
+    right: 0;
+    margin-right: 50px;
+    font-size: 20px;
+    bottom: 0;
+    margin-bottom: 20px;
+}
+
+.helper-slider {
+    position: fixed !important;
+    z-index: 5 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.slider-gif-image {
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+.slider-button {
+    z-index: 7;
+    position: absolute;
+    bottom: 0;
+    margin: 20px;
+    background-color: black;
+}
+
+.srd-default-node__out {
+    flex-grow: 0.5;
+    -webkit-flex-grow: 0;
+}
+
+.srd-port {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgba(255,255,255,1);
+}
+
+.srd-default-node {
+    background: rgb(252, 252, 255) none repeat scroll 0% 0% !important;
+    border: solid 4px rgb(244, 244, 244);
+    font-size: 16px;
+    color: black;
+    padding: 5px 5px 5px 5px;
+    border-radius: 12px;
+}
+
+.srd-default-node__ports {
+    height: 0;
+}
+
+.srd-default-port--out {
+    margin-top: 0;
+    margin-left: -48%;
+    position: absolute;
+}
+
+.srd-default-port--in {
+    margin-left: 31%;
+    margin-top: -49px;
+    position: absolute;
+}
+
+.srd-default-node__title {
+    background: none;
+}
+
+.srd-default-port--in .srd-port {
+    background-color: rgb(0, 203, 127);
+    border: solid 2px white;
+}
+
+.srd-default-port--out .srd-port {
+    background-color: rgb(24, 182, 255);
+    border: solid 2px rgb(90, 129, 253);
+}
+
+.script-theme {
+    position: fixed;
+    z-index: 5;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    cursor: pointer;
+    font-size: 2rem;
+}

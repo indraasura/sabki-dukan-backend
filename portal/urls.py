@@ -23,5 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', views.home),
     path('api/v1/', include('getData.urls')),
-    path('media/', include('getData.urls'))
+    path('media/', include('getData.urls')),
+    path('builder/', include('scriptbuilder.urls')),
+    path('autocall/', include('autocall.urls')),
 ]

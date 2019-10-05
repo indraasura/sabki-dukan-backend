@@ -1,0 +1,119 @@
+.card-look-side-nav {
+    margin-left: 70px;
+    /* height: 85% */
+    height: 100%;
+    z-index: 1;
+    margin-top: 70px;
+}
+.fixed-side-nav {
+    width: 60px;
+    z-index: 2;
+}
+.inline-icon {
+    vertical-align: middle;
+    font-size: 28px !important;
+    padding-right: 10px;
+}
+.icon-side {
+    margin-left: -18px;
+    margin-top: 10px;
+    font-size: 34px;
+}
+.more {
+    background:none;
+    border:none;
+    color:#FFF;
+    font-family:Verdana, Geneva, sans-serif;
+    cursor:pointer;
+}
+
+.side-buttons {
+    padding-left: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+button:focus {
+    background: none;
+}
+
+.side-hover:hover{
+    background-color: #2D2D2D;
+    -webkit-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+}
+
+.side-hover:not( :hover ){
+    -webkit-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+}
+
+.side-loader {
+    top: 0;
+    bottom: 30%;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+}
+
+.bottom-hide-nav {
+    bottom: 45px;
+    padding-right: 10px;
+    position: absolute;
+
+}
+
+.subsidenav {
+    transition-timing-function: ease-in;
+
+    /* Quick on the way out */
+    transition: 0.7s;
+}
+
+.document-name {
+    position: fixed;
+    margin-left: 70px;
+    z-index: 2;
+    margin-top: 5px;
+    padding: 10px;
+    width: 300px;
+    background-color: #393939;
+    color: white;
+}
+
+.document-name-input {
+    border-bottom: none !important;
+    height: 2rem !important;
+    padding: auto !important;
+    margin: 0 !important;
+    color: white;
+    width: 85% !important;
+}
+
+.document-name-input:focus {
+    border-bottom: none!important;
+    box-shadow: none!important;
+}
+
+.document-dropdown {
+    position: absolute;
+    font-size: 3rem;
+    margin-top: -7px;
+}
+
+.document-dropdown-options {
+    left: 0 !important;
+    top: 50px !important;
+    width: 300px !important;
+    background-color: #393939;
+    transform-origin: 10px 10px 10px !important;
+}
+
+.center-icon {
+    display: inline-flex;
+    vertical-align: top;
+    margin-right: 10px;
+}
